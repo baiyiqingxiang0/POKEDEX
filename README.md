@@ -25,7 +25,7 @@
 ## 📱 使用方法
 
 ### 在线体验
-访问 [宝可梦图鉴在线演示](https://baiyiqingxiang0.github.io/POKEDEX/) 即可在线体验。
+访问 [宝可梦图鉴在线演示](http://www.baiyiqingxiang.online:8006/) 即可在线体验。
 
 ### 本地运行
 1. 克隆仓库到本地：
