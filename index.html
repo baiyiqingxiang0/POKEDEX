@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝可梦图鉴 (Pokédex)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="pokedex-container">
+        <!-- 宝可梦图鉴外壳 -->
+        <div class="pokedex">
+            <!-- 顶部区域 -->
+            <div class="pokedex-top">
+                <!-- 标题 -->
+                <h1 class="pokedex-title">POKEDEX</h1>
+                
+                <!-- 指示灯区域 -->
+                <div class="indicator-lights">
+                    <div class="light light-red"></div>
+                    <div class="light light-yellow"></div>
+                    <div class="light light-green"></div>
+                </div>
+            </div>
+            
+            <!-- 中央显示区域 -->
+            <div class="display-area">
+                <!-- 蓝色大圆形镜头 -->
+                <div class="camera-lens">
+                    <div class="lens-reflection"></div>
+                </div>
+                
+                <!-- 显示屏幕 -->
+                <div class="screen">
+                    <div class="screen-inner">
+                        <!-- 宝可梦精灵图显示区域 -->
+                        <div class="pokemon-display">
+                            <img id="pokemon-sprite" src="" alt="选择一个宝可梦">
+                            <div id="pokemon-info">
+                                <p id="pokemon-id"></p>
+                                <p id="pokemon-name"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 下方列表区域 -->
+            <div class="list-area">
+                <div class="list-container">
+                    <ul id="pokemon-list">
+                        <!-- 宝可梦列表将通过JavaScript动态生成 -->
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 底部控制区域 -->
+            <div class="control-area">
+                <!-- D-pad方向键 -->
+                <div class="d-pad">
+                    <div class="d-pad-up"></div>
+                    <div class="d-pad-right"></div>
+                    <div class="d-pad-down"></div>
+                    <div class="d-pad-left"></div>
+                    <div class="d-pad-center"></div>
+                </div>
+                
+                <!-- 圆形按钮 -->
+                <div class="buttons">
+                    <div class="button button-a">A</div>
+                    <div class="button button-b">B</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 引入宝可梦数据 -->
+    <script src="pokemon-data.js"></script>
+    <!-- 引入主脚本 -->
+    <script src="script.js"></script>
+</body>
+</html> 

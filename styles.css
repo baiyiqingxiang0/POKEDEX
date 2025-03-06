@@ -1,0 +1,332 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 宝可梦图鉴容器 */
+.pokedex-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* 宝可梦图鉴主体 */
+.pokedex {
+    background-color: #cc0000; /* 经典红色 */
+    border: 10px solid #8b0000; /* 深红色边框 */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 顶部区域 */
+.pokedex-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 标题 */
+.pokedex-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #8b0000;
+    letter-spacing: 2px;
+}
+
+/* 指示灯区域 */
+.indicator-lights {
+    display: flex;
+    gap: 10px;
+}
+
+/* 指示灯样式 */
+.light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.light-red {
+    background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc0000);
+    box-shadow: 0 0 10px #ff6b6b;
+}
+
+.light-yellow {
+    background: radial-gradient(circle at 30% 30%, #ffeb3b, #ffc107);
+    box-shadow: 0 0 5px #ffc107;
+}
+
+.light-green {
+    background: radial-gradient(circle at 30% 30%, #4caf50, #2e7d32);
+    box-shadow: 0 0 5px #4caf50;
+}
+
+/* 中央显示区域 */
+.display-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* 蓝色大圆形镜头 */
+.camera-lens {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #64b5f6, #1976d2);
+    border-radius: 50%;
+    border: 5px solid #0d47a1;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* 镜头反光效果 */
+.lens-reflection {
+    width: 20px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transform: rotate(45deg);
+}
+
+/* 显示屏幕 */
+.screen {
+    width: 100%;
+    height: 250px;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 40px;
+    position: relative;
+}
+
+/* 屏幕内部 */
+.screen-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #98cb98; /* 经典绿色屏幕 */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 宝可梦显示区域 */
+.pokemon-display {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* 宝可梦精灵图 */
+#pokemon-sprite {
+    max-width: 150px;
+    max-height: 150px;
+    image-rendering: pixelated; /* 保持像素风格 */
+    margin-bottom: 10px;
+}
+
+/* 宝可梦信息 */
+#pokemon-info {
+    font-family: 'Courier New', monospace;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 下方列表区域 */
+.list-area {
+    background-color: #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* 列表容器 */
+.list-container {
+    width: 100%;
+}
+
+/* 宝可梦列表 */
+#pokemon-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+/* 列表项 */
+#pokemon-list li {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+#pokemon-list li:hover {
+    background-color: #e0e0e0;
+}
+
+#pokemon-list li.active {
+    background-color: #cc0000;
+    color: white;
+}
+
+/* 底部控制区域 */
+.control-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* D-pad方向键 */
+.d-pad {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.d-pad-center {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.d-pad-up, .d-pad-right, .d-pad-down, .d-pad-left {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    position: absolute;
+}
+
+.d-pad-up {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px 5px 0 0;
+}
+
+.d-pad-right {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 0 5px 5px 0;
+}
+
+.d-pad-down {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 5px 5px;
+}
+
+.d-pad-left {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 5px 0 0 5px;
+}
+
+/* 圆形按钮 */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .pokedex {
+        padding: 15px;
+    }
+    
+    .pokedex-title {
+        font-size: 22px;
+    }
+    
+    .camera-lens {
+        width: 60px;
+        height: 60px;
+        left: 10px;
+    }
+    
+    .screen {
+        height: 200px;
+    }
+    
+    #pokemon-sprite {
+        max-width: 120px;
+        max-height: 120px;
+    }
+    
+    .list-area {
+        max-height: 150px;
+    }
+    
+    #pokemon-list {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .d-pad {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .button {
+        width: 35px;
+        height: 35px;
+    }
+} 
